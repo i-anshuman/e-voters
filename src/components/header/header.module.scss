@@ -1,0 +1,122 @@
+@import '../../scss/variables.scss';
+
+.header {
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: sticky;
+  top: 0;
+
+  &__logo {
+    max-width: 40px;
+  }
+
+  &__title {
+    display: none;
+    color: #ffffff;
+    margin-right: auto;
+    padding: 0 15px;
+    &__name, 
+    &__description {
+      margin: 0;
+      padding: 0;
+    }
+    &__description {
+      display: none;
+      font-family: $font-2;
+    }
+  }
+
+  &__links {
+    font-family: $font-2;
+    list-style: none;
+    margin: 0 0 0 auto;
+    padding: 0;
+    display: flex;
+
+    &__link {
+      margin: 0px 10px;
+      
+      &:first-child {
+        margin-left: 0;
+      }
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+  }
+
+  @media screen and (min-width: map-get($breakpoints, xs)) {
+    &__logo {
+      max-width: 50px;
+    }
+    &__title {
+      display: block;
+      &__name {
+        font-size: 1.4rem;
+      }
+    }
+    &__links {
+      &__link {
+        & a {
+          font-size: 0.8rem;
+        }
+      }
+    }
+  }
+
+  @media screen and (min-width: map-get($breakpoints, sm)) {
+    &__logo {
+      max-width: 60px;
+    }
+    &__title {
+      &__name {
+        font-size: 1.6rem;
+      }
+      &__description {
+        display: block;
+        font-size: 0.8rem;
+      }
+    }
+    &__links {
+      &__link {
+        & a {
+          font-size: 1rem;
+        }
+      }
+    }
+  }
+
+  @media screen and (min-width: map-get($breakpoints, md)) {
+    &__logo {
+      max-width: 70px;
+    }
+    &__title {
+      &__name {
+        font-size: 1.8rem;
+      }
+      &__description {
+        font-size: 1rem;
+      }
+    }
+    &__links {
+      &__link {
+        & a {
+          font-size: 1.2rem;
+        }
+      }
+    }
+  }
+
+  @media screen and (min-width: map-get($breakpoints, lg)) {
+    &__logo {
+      max-width: 80px;
+    }
+    &__title {
+      &__name {
+        font-size: 2rem;
+      }
+    }
+  }
+}
