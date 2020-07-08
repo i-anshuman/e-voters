@@ -1,0 +1,113 @@
+@import '../../scss/variables.scss';
+
+.footer {
+  padding: 20px 30px;
+  &__link_groups {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 0;
+    & > div {
+      font-family: $font-5;
+      & > p {
+        text-decoration: underline;
+        color: #fff;
+        margin: 0 0 15px 0;
+      }
+      & > ul {
+        list-style: none;
+        margin: 0;
+        padding: 0px;
+        & > li {
+          font-size: 0.9rem;
+          margin: 10px 0;
+        }
+      }
+    }
+  }
+  &__misc {
+    margin: 10px 0px;
+    padding: 10px 15px;
+    border-top: 2px solid #fff;
+    border-bottom: 2px solid #fff;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    &__logo {
+      max-width: 40px;
+    }
+    &__title {
+      display: none;
+      font-size: 1.4rem;
+      margin: 0 auto 0 10px;
+      color: #fff;
+    }
+    &__social {
+      text-align: center;
+      font-size: 1.2rem;
+      & > a {
+        color: #fff;
+        background-color: #000;
+        width: 30px;
+        height: 30px;
+        padding-top: 4px;
+        margin-left: 10px;
+        transition: map-get($transitions, 1);
+        &:hover {
+          border-radius: 50%;
+          background-color: #fff;
+          color: #000;
+        }
+      }
+    }
+  }
+  &__legal {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column-reverse;
+    &__copyright,
+    &__dev {
+      font-size: 0.8rem;
+      font-family: $font-3;
+      color: #fff;
+      text-align: center;
+      margin: 0;
+      & > a {
+        font-family: $font-4;
+      }
+    }
+    &__copyright {
+      margin-top: 5px;
+    }
+    &__dev {
+      margin-bottom: 5px;
+    }
+  }
+
+  @media screen and (min-width: map-get($breakpoints, xs)) {
+    &__misc {
+      &__title {
+        display: block;
+      }
+    }
+    &__legal {
+      &__copyright,
+      &__dev {
+        font-size: 1rem;
+      }
+    }
+  }
+
+  @media screen and (min-width: map-get($breakpoints, sm)) {
+    &__link_groups {
+      justify-content: space-around;
+    }
+    &__legal {
+      flex-direction: row;
+      &__copyright,
+      &__dev {
+        margin: 0;
+      }
+    }
+  }
+}
