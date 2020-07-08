@@ -1,0 +1,171 @@
+/**
+ * This file contains global styles.
+ * Classes in this file is common among all components.
+ */
+@import url('https://fonts.googleapis.com/css?family=Abril+Fatface&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Patua+One&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Flamenco&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Pacifico&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Poppins&display=swap');
+@import './variables.scss';
+ 
+*::before, *, *::after {
+  box-sizing: border-box;
+}
+ 
+:root {
+  font-size: 16px;
+}
+ 
+html,
+body {
+  margin: 0;
+  padding: 0;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
+    Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue,
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+ 
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+ 
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+ 
+a {
+  text-decoration: none;
+  cursor: pointer;
+  display: inline-block;
+  color: inherit;
+}
+ 
+button {
+  background: transparent;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+ 
+.responsive-img {
+  max-width: 100%;
+  display: block;
+  height: auto;
+}
+ 
+.title {
+  font-family: $font-1;
+}
+ 
+.logo {
+  height: auto;
+  border-radius: 50%;
+  border-bottom-right-radius: 15%;
+}
+ 
+.link {
+  transition: map-get($transitions, 0);
+  &::after {
+    content: '';
+    position: relative;
+    left: 50%;
+    width: 0%;
+    height: 2px;
+    display: block;
+    border-radius: 5px;
+    transition: map-get($transitions, 0);
+  }
+  &:hover {
+    &::after {
+      left: 0;
+      width: 100%;
+    }
+  }
+  &__primary {
+    $colors: map-get($links, primary);
+    color: map-get($colors, link);
+    &:visited {
+      color: map-get($colors, visited);
+      &::after {
+        background-color: map-get($colors, visited);
+      }
+    }
+    &:hover {
+      color: map-get($colors, hover);
+      &::after {
+        background-color: map-get($colors, hover);
+      }
+    }
+    &:active {
+      color: map-get($colors, active);
+      &::after {
+        background-color: map-get($colors, active);
+      }
+    }
+  }
+}
+
+.container {
+  overflow-x: hidden;
+  header {
+    z-index: 1;
+  }
+  header, footer, nav {
+    background-color: #353535;
+  }
+  nav, main {
+    overflow-x: hidden;
+    overflow-y: auto;
+  }
+  main {
+    display: flex;
+    padding: 30px 25px;
+  }
+  @media screen and (max-width: map-get($breakpoints, sm)) {
+    header, footer, main {
+      width: 100vw;
+    }
+  }
+  @media screen and (min-width: map-get($breakpoints, sm)) {
+    main {
+      margin: 10px;
+    }
+  }
+}
+
+.container {
+  display: grid;
+  grid-template-rows: auto auto auto;
+  grid-template-columns: auto 1fr;
+  grid-template-areas: "sidenav header" "sidenav main" "sidenav footer";
+
+  header {
+    grid-area: header;
+  }
+  nav {
+    grid-area: sidenav;
+  }
+  main {
+    grid-area: main;
+  }
+  footer {
+    grid-area: footer;
+  }
+
+  @media screen and (min-width: map-get($breakpoints, sm)) {
+    grid-template-areas: "header header" "sidenav main" "footer footer";
+  }
+}
+ 
+input, button {
+  display: block;
+  outline: none;
+  border: none;
+  background: transparent;
+}

@@ -1,0 +1,43 @@
+/**
+ * This file contains global variables
+ * Variables in this file is common among all components.
+ */
+
+$breakpoints: (
+  xs: 575.98px,
+  sm: 767.98px,
+  md: 991.98px,
+  lg: 1199.98px
+) !default;
+
+$font-1: 'Abril Fatface', cursive !default;
+$font-2: 'Patua One', cursive !default;
+$font-3: 'Flamenco', cursive !default;
+$font-4: 'Pacifico', cursive !default;
+$font-5: 'Poppins', sans-serif !default;
+
+$links: (
+  primary: (
+       link: #ffffff,
+      hover: #03a4f4,
+     active: #0399f4,
+    visited: #ffffff
+  )
+) !default;
+
+$colors: (
+  primary: #448afe,
+   danger: #dc143c,
+  success: #228429,
+   grey-1: #252525,
+   grey-2: #454545,
+   grey-3: #656565,
+   grey-4: #858585,
+   grey-5: #a5a5a5,
+) !default;
+
+$transitions: (
+  0: all 0.2s ease,
+  1: all 0.5s ease,
+  2: all 1.0s ease
+) !default;
