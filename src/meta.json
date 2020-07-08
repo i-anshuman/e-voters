@@ -1,0 +1,59 @@
+{
+  "name": "eVoters",
+  "description": "Online Voter Registration Portal",
+  "sections": [
+    {
+      "title": "Enroll",
+      "ref": "/enroll"
+    }, {
+      "title": "Search",
+      "ref": "/search"
+    }, {
+      "title": "Statistics",
+      "ref": "/statistics"
+    }
+  ],
+  "supports": [
+    {
+      "title": "Guide",
+      "ref": "/guide"
+    }, {
+      "title": "FAQs",
+      "ref": "/faq"
+    }, {
+      "title": "Contact",
+      "ref": "/contact"
+    }
+  ],
+  "others": [
+    {
+      "title": "About",
+      "ref": "/about"
+    }, {
+      "title": "Terms",
+      "ref": "/terms"
+    }, {
+      "title": "Privacy",
+      "ref": "/privacy"
+    }
+  ],
+  "socials": [
+    {
+      "icon": "fa fa-facebook",
+      "ref": "https://facebook.com"
+    }, {
+      "icon": "fa fa-twitter",
+      "ref": "https://twitter.com"
+    }
+  ],
+  "date": {
+    "year": 2020
+  },
+  "developer": {
+    "name": "Anshuman",
+    "email": "anshuman844@gmail.com",
+    "profile": "https://www.linkedin.com/in/anshuman02/",
+    "twitter": "https://twitter.com/iNullPointer",
+    "linkedin": "https://www.linkedin.com/in/anshuman02/"
+  }
+}
