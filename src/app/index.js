@@ -3,6 +3,9 @@ import { Switch, Route } from "react-router-dom";
 import '../scss/global.scss';
 import Header from '../components/header';
 import Footer from '../components/footer';
+import Enroll from '../sections/enroll';
+import Search from '../sections/search';
+import Statistics from '../sections/statistics';
 
 const App = () => {
   return (
@@ -14,13 +17,13 @@ const App = () => {
             <h1>Home</h1>
           </Route>
           <Route path="/enroll">
-            <h1>Enroll</h1>
+            <Enroll />
           </Route>
           <Route path="/search">
-            <h1>Search</h1>
+            <Search />
           </Route>
           <Route path="/statistics">
-            <h1>Statistics</h1>
+            <Statistics />
           </Route>
         </Switch>
       </main>
