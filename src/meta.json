@@ -55,5 +55,14 @@
     "profile": "https://www.linkedin.com/in/anshuman02/",
     "twitter": "https://twitter.com/iNullPointer",
     "linkedin": "https://www.linkedin.com/in/anshuman02/"
+  },
+  "api": {
+    "states": "https://raw.githubusercontent.com/sab99r/Indian-States-And-Districts/master/states-and-districts.json",
+    "evoter": {
+      "statistics": "https://evoters.herokuapp.com/statistics",
+      "enroll": "https://evoters.herokuapp.com/enroll",
+      "search": "https://evoters.herokuapp.com/search",
+      "download": "https://evoters.herokuapp.com/download"
+    }
   }
 }
