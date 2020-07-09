@@ -1,0 +1,91 @@
+@import '../../scss/variables.scss';
+
+.search {
+  position: relative;
+  &__form_wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 30px 0;
+  }
+
+  &__form_input {
+    position: relative;
+    max-width: 300px;
+    width: 100%;
+    margin: 10px 0;
+    display: flex;
+    align-items: center;
+    
+    & input, 
+    & select {
+      width: 100%;
+      border: 2px solid map-get($map: $colors, $key: grey-1);
+      border-radius: 5px;
+      padding: 15px 10px;
+      transition: map-get($map: $transitions, $key: 0);
+      font-size: 0.9rem;
+    }
+    
+    input {
+      &:focus, &:not(:placeholder-shown) {
+        color: map-get($map: $colors, $key: primary);
+        border: 2px solid map-get($map: $colors, $key: primary);
+        & + label {
+          color: map-get($map: $colors, $key: primary);
+          top: -7px;
+          background-color: #fff;
+        }
+      }
+    }
+
+    select {
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      text-indent: 1px;
+      text-overflow: '';
+      background: transparent;
+      background-image: url("data:image/svg+xml;utf8,<svg fill='black' height='24' viewBox='0 0 24 24' width='24' xmlns='http://www.w3.org/2000/svg'><path d='M7 10l5 5 5-5z'/><path d='M0 0h24v24H0z' fill='none'/></svg>");
+      background-repeat: no-repeat;
+      background-position-x: 100%;
+      background-position-y: 50%;
+      &:focus {
+        border: 2px solid map-get($map: $colors, $key: primary);
+      }
+    }
+
+    button {
+      width: 100px;
+      margin-left: auto;
+      background: map-get($map: $colors, $key: primary);
+      border-radius: 5px;
+      padding: 15px 10px;
+      transition: map-get($map: $transitions, $key: 0);
+      font-size: 1rem;
+      color: #fff;
+
+      &:hover {
+        box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+      }
+
+      &:disabled {
+        opacity: 0.8;
+      }
+
+      &[type="submit"] {
+        width: 100%;
+      }
+    }
+
+    & label {
+      position: absolute;
+      top: 17px;
+      left: 12px;
+      font-size: 0.9rem;
+      padding: 0 4px;
+      transition: map-get($map: $transitions, $key: 0);
+      color: map-get($map: $colors, $key: grey-1);
+    }
+  }  
+}
