@@ -6,7 +6,7 @@ import * as serviceWorker from './serviceWorker';
 
 ReactDOM.render(
   <React.StrictMode>
-    <Router>
+    <Router basename="/e-voters">
       <App />
     </Router>
   </React.StrictMode>,
