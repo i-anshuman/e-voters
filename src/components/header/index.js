@@ -29,6 +29,11 @@ const Header = () => {
             )
           })
         }
+        <li className={ styles.header__links__link }>
+          <a className="link link__primary"
+            href="https://evoters.herokuapp.com/"
+            target="_blank" rel="noopener noreferrer">API</a>
+        </li>
       </ul>
     </header>
   );

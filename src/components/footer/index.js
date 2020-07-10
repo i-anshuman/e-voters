@@ -9,53 +9,6 @@ const Footer = props => {
   };
   return (
     <footer className={ styles.footer }>
-      <div className={ styles.footer__link_groups }>
-        <div>
-          <p>Sections</p>
-          <ul>
-            {
-              meta.sections.map((section, index) => {
-                return (
-                  <li key={ index }>
-                    <Link to={ section.ref } className="link link__primary">
-                      { section.title }
-                    </Link>
-                  </li>
-                )
-              })
-            }
-          </ul>
-        </div>
-        <div>
-          <p>Support</p>
-          <ul>
-            {
-              meta.supports.map((support, index) => {
-                return (
-                  <li key={ index }>
-                    <Link to={ support.ref } className="link link__primary">
-                      { support.title }
-                    </Link>
-                  </li>
-                )
-              })
-            }
-          </ul>
-        </div>
-        <div>
-          {
-            meta.others.map((other, index) => {
-              return (
-                <p key={ index }>
-                  <Link to={ other.ref } className="link link__primary">
-                    { other.title }
-                  </Link>
-                </p>
-              )
-            })
-          }
-        </div>
-      </div>
       <div className={styles.footer__misc}>
         <Link to="/">
           <img src="/logo512.png" alt="logo" className={ `${ styles.footer__misc__logo } logo` } />
