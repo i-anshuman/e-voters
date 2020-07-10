@@ -14,7 +14,7 @@ const App = () => {
       <main>
         <Switch>
           <Route exact path="/">
-            <h1>Home</h1>
+            <Enroll />
           </Route>
           <Route path="/enroll">
             <Enroll />
