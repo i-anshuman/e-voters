@@ -8,6 +8,7 @@ const Statistics = (props) => {
   const graphRef = useRef(null);
   const drawGraph = (dataset, width, height) => {
     const svg = d3.select(graphRef.current)
+                  .html("")
                   .append('svg')
                   .attr('width', width+100)
                   .attr('height', height+60);
@@ -73,7 +74,9 @@ const Statistics = (props) => {
     <section>
       <h1 className="section-title">Statistics: Total Voters Statewise</h1>
       <hr />
-      <div id="graph" className={styles.graph} ref={graphRef}/>
+      <div id="graph" className={styles.graph} ref={graphRef}>
+        <h2>Loading...</h2>
+      </div>
       <p>
         Note: Total States displayed in graph means the voters of those states are added only.
         Add Voters from more states to show them here.
