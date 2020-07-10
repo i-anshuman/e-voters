@@ -52,6 +52,12 @@ button {
   outline: none;
   cursor: pointer;
 }
+
+hr {
+  border: none;
+  height: 4px;
+  background-color: #cccccce1;
+}
  
 .responsive-img {
   max-width: 100%;
@@ -62,11 +68,24 @@ button {
 .title {
   font-family: $font-1;
 }
+
+.section-title {
+  text-align: center;
+  font-family: $font-2;
+  font-size: 2.2rem;
+  margin: 0 0 10px 0;
+}
  
 .logo {
   height: auto;
   border-radius: 50%;
   border-bottom-right-radius: 15%;
+}
+.error {
+  border-color: crimson !important;
+  & + label {
+    color: crimson !important;
+  }
 }
  
 .link {
@@ -124,7 +143,6 @@ button {
     overflow-y: auto;
   }
   main {
-    display: flex;
     padding: 30px 25px;
   }
   @media screen and (max-width: map-get($breakpoints, sm)) {
